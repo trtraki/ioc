@@ -5,6 +5,7 @@ use App\Services\Test as TestA;
 
 class WelcomeController extends Controller {
 
+	protected $test;
 	/*
 	|--------------------------------------------------------------------------
 	| Welcome Controller
@@ -24,7 +25,7 @@ class WelcomeController extends Controller {
 	public function __construct(TestA $test)
 	{
 		$this->middleware('guest');
-		Log::info('addition = '.$test->addition(1,2));
+		$this -> test = $test;
 	}
 
 	/**
@@ -34,6 +35,28 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+
+		$x = 2;
+		$y = 3;
+
+		/*
+		Log::info($x . ' + '. $y . 'の和を計算をします。');
+		$z = $x + $y;
+		Log::info('答えは'. $z);
+
+		Log::info($x . ' - '. $y . 'の差を計算をします。');
+		$z = $x - $y;
+		Log::info('答えは'. $z);
+
+		Log::info($x . ' × '. $y . 'の積を計算をします。');
+		$z = $x * $y;
+		Log::info('答えは'. $z);
+		 */
+
+		$this -> test ->addition($x, $y);
+		$this -> test ->subtraction($x, $y);
+		$this -> test ->multiplication($x, $y);
+
 		return view('welcome');
 	}
 
