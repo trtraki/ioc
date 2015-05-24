@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use Log;
+use App\Services\Test as TestA;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -18,9 +21,10 @@ class WelcomeController extends Controller {
 	 *
 	 * @return void
 	 */
-	public function __construct()
+	public function __construct(TestA $test)
 	{
 		$this->middleware('guest');
+		Log::info('addition = '.$test->addition(1,2));
 	}
 
 	/**
