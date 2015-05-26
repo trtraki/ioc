@@ -6,9 +6,9 @@ class Test implements Testinterface  {
 
 	public function addition($x, $y) {
 
-		Log::info($x . ' + '. $y . '$B$NOB$r7W;;$r$7$^$9!#(B');
+		Log::info($x . ' + '. $y . 'の和を計算をします。');
 		$z = $x + $y;
-		Log::info('$BEz$($O(B'. $z);
+		Log::info('答えは'. $z);
 
 		return $z;
 
@@ -16,18 +16,18 @@ class Test implements Testinterface  {
 
 	public function subtraction($x, $y) {
 
-		Log::info($x . ' - '. $y . '$B$N:9$r7W;;$r$7$^$9!#(B');
+		Log::info($x . ' - '. $y . 'の差を計算をします。');
 		$z = $x - $y;
-		Log::info('$BEz$($O(B'. $z);
+		Log::info('答えは'. $z);
 
 		return $z;
 	}
 
 	public function multiplication($x, $y) {
 
-		Log::info($x . ' $B!_(B '. $y . '$B$N@Q$r7W;;$r$7$^$9!#(B');
+		Log::info($x . ' × '. $y . 'の積を計算をします。');
 		$z = $x * $y;
-		Log::info('$BEz$($O(B'. $z);
+		Log::info('答えは'. $z);
 
 		return $z;
 	}

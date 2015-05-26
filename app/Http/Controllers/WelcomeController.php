@@ -38,21 +38,19 @@ class WelcomeController extends Controller {
 
 		$x = 2;
 		$y = 3;
-
-		/*
-		Log::info($x . ' + '. $y . '$B$NOB$r7W;;$r$7$^$9!#(B');
+/*
+		Log::info($x . ' + '. $y . 'の和を計算をします。');
 		$z = $x + $y;
-		Log::info('$BEz$($O(B'. $z);
+		Log::info('答えは'. $z);
 
-		Log::info($x . ' - '. $y . '$B$N:9$r7W;;$r$7$^$9!#(B');
+		Log::info($x . ' - '. $y . 'の差を計算をします。');
 		$z = $x - $y;
-		Log::info('$BEz$($O(B'. $z);
+		Log::info('答えは'. $z);
 
-		Log::info($x . ' $B!_(B '. $y . '$B$N@Q$r7W;;$r$7$^$9!#(B');
+		Log::info($x . ' × '. $y . 'の積を計算をします。');
 		$z = $x * $y;
-		Log::info('$BEz$($O(B'. $z);
-		 */
-
+		Log::info('答えは'. $z);
+ */
 		$this -> test ->addition($x, $y);
 		$this -> test ->subtraction($x, $y);
 		$this -> test ->multiplication($x, $y);
