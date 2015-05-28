@@ -1,6 +1,8 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Services\Testinterface;
+use App\Services\Test;
 
 class TestServiceProvider extends ServiceProvider {
 
@@ -27,7 +29,7 @@ class TestServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind('Testinterface', function($app)
 		{
-			return new TestInterface($app['Test']);
+			return new Test($app['Test']);
 		});
 	}
 }

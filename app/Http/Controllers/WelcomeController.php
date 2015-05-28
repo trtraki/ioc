@@ -2,6 +2,7 @@
 
 use Log;
 use App\Services\Test as TestA;
+use App\Facades\TestFacade;
 
 class WelcomeController extends Controller {
 
@@ -55,6 +56,13 @@ class WelcomeController extends Controller {
 		$this -> test ->subtraction($x, $y);
 		$this -> test ->multiplication($x, $y);
 
+
+
+		TestFacade::addition($x, $y);
+		TestFacade::subtraction($x, $y);
+		TestFacade::multiplication($x, $y);
+		
+		
 		return view('welcome');
 	}
 
