@@ -1,6 +1,7 @@
 <?php
 
 use App\Services\Test;
+use App\Http\Controllers\WelcomeController;
 
 class CalculationTest extends TestCase {
 
@@ -19,6 +20,17 @@ class CalculationTest extends TestCase {
 		$this -> assertEquals($test->multiplication(2,4), 8);
 	}
 
+
+        /**
+	*      * @expectedException ErrorException
+	* */
+	public function testControllerMock() {
+		TestFacade::shouldReceive('addition')
+			->once()
+			->with(2,3)
+			->andThrow();
+		$controller = new WelcomeController(new Test());
+	}
 
 
 }
