@@ -29,7 +29,7 @@ class CalculationTest extends TestCase {
 			->once()
 			->with(2,3)
 			->andThrow();
-		$controller = new WelcomeController(new Test());
+		WelcomeController::index();
 	}
 
 
